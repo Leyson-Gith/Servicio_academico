@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios Académicos</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<!-- CSS EXTERNO -->
+<link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+  <div class="nav-container">
+
+    <a href="#" class="logo">
+	<span>S</span>A
+	</a>
+
+    <!-- BOTÓN HAMBURGUESA -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- MENÚ -->
+    <nav class="nav-menu" id="nav-menu">
+      <a href="#homer">Inicio</a>
+      <a href="#categor">Catálogo</a>
+      <a href="#sobre">Productos</a>
+      <a href="#blog">Blog</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="banner" id="homer">
+  <p>Servicios Académicos</p>
+</section>
+
+<!-- CATEGORIAS -->
+<section class="container" id="categor">
+  <h1 class="heading-1">Información de Catálogo</h1>
+
+  <div class="container-categories">
+    <div class="card-category category-moca"><p>Clientes Felices</p></div>
+    <div class="card-category category-expreso"><p>Nuestros Servicios</p></div>
+    <div class="card-category category-capuchino"><p>Promociones</p></div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="container" id="sobre">
+  <h1 class="heading-1">Nuestro Producto</h1>
+
+  <div class="contenedor-sobre-nosotros">
+    <img src="./img/Confianza.jpg" alt="">
+
+    <div class="contenido-textos">
+      <h3>Los mejores productos</h3>
+      <p>Mejoramos conocimientos y habilidades académicas.</p>
+
+      <h3>Objetivos</h3>
+      <p>Apoyo académico, becas, capacitación docente y eventos educativos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="container" id="blog">
+  <h1 class="heading-1">Últimos Blogs</h1>
+
+  <div class="container-blogs">
+
+			<div class="card-blog">
+		
+		<div class="img-box">
+			<img src="./img/ClientesHappy.jpeg" alt="">
+		</div>
+
+		<div class="content-blog">
+			<h3>Clientes Felices</h3>
+		</div>
+
+		</div>
+
+			<div class="card-blog">
+		
+		<div class="img-box">
+			<img src="./img/Servicio.jpeg" alt="">
+		</div>
+
+		<div class="content-blog">
+			<h3>Servicios</h3> 
+		</div>
+
+		</div>
+
+   
+			<div class="card-blog">
+		
+		<div class="img-box">
+			<img src="./img/Promociones.jpeg" alt="">
+		</div>
+
+		<div class="content-blog">
+			<h3>Promociones</h3>
+		</div>
+
+		</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="contacto">
+  <h3>Contacto</h3>
+  <p>Bogotá, Colombia</p>
+  <a href="mailto:universitareas07@gmail.com" class="btn-contacto">
+  📧 Contactar por Email
+</a>
+</footer>
+
+<script>
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+
+// ABRIR / CERRAR MENU
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+  hamburger.classList.toggle("active");
+});
+
+// CERRAR AL HACER CLICK EN UN LINK (UX PRO)
+document.querySelectorAll(".nav-menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    hamburger.classList.remove("active");
+  });
+});
+
+// CERRAR SI HACES CLICK FUERA
+document.addEventListener("click", (e) => {
+  if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+    navMenu.classList.remove("active");
+    hamburger.classList.remove("active");
+  }
+});
+</script>
+
+</body>
+</html>
