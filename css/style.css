@@ -1,0 +1,1497 @@
+/*=========================================
+    GOOGLE FONTS
+=========================================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*=========================================
+    VARIABLES
+=========================================*/
+:root{
+
+    --primary:#0F4C81;
+    --secondary:#00B4D8;
+    --success:#2ECC71;
+    --warning:#F39C12;
+    --danger:#E74C3C;
+
+    --white:#ffffff;
+    --light:#f5f7fb;
+    --gray:#6b7280;
+    --dark:#1F2937;
+
+    --shadow:0 10px 25px rgba(0,0,0,.10);
+
+    --radius:18px;
+
+}
+
+/*=========================================
+    RESET
+=========================================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--light);
+
+    color:var(--dark);
+
+    line-height:1.7;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+/*=========================================
+        HEADER
+=========================================*/
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(15,76,129,.95);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+
+}
+
+.nav-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 25px;
+
+}
+
+/*=========================================
+        LOGO
+=========================================*/
+
+.logo{
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:white;
+
+}
+
+.logo span{
+
+    color:#FFD166;
+
+}
+
+/*=========================================
+        MENÚ
+=========================================*/
+
+.nav-menu{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+.nav-menu a{
+
+    color:white;
+
+    font-weight:500;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+.nav-menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-5px;
+
+    width:0;
+
+    height:2px;
+
+    background:#FFD166;
+
+    transition:.3s;
+
+}
+
+.nav-menu a:hover::after{
+
+    width:100%;
+
+}
+
+.nav-menu a:hover{
+
+    color:#FFD166;
+
+}
+
+/*=========================================
+        HAMBURGUESA
+=========================================*/
+
+.hamburger{
+
+    display:none;
+
+    flex-direction:column;
+
+    gap:5px;
+
+    cursor:pointer;
+
+}
+
+.hamburger span{
+
+    width:28px;
+
+    height:3px;
+
+    background:white;
+
+    transition:.4s;
+
+}
+
+.hamburger.active span:nth-child(1){
+
+    transform:rotate(45deg) translate(6px,6px);
+
+}
+
+.hamburger.active span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.hamburger.active span:nth-child(3){
+
+    transform:rotate(-45deg) translate(5px,-5px);
+
+}
+
+/*=========================================
+        BANNER
+=========================================*/
+
+.banner{
+
+    margin-top:70px;
+
+    min-height:420px;
+
+    background-image:url("../img/Plan_aPAYO.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    position:relative;
+
+}
+
+.banner::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+}
+
+.banner-content{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    color:white;
+
+    max-width:900px;
+
+    padding:20px;
+
+}
+
+.banner-content h1{
+
+    font-size:55px;
+
+    margin-bottom:15px;
+
+    font-weight:700;
+
+}
+
+.banner-content h2{
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+    color:#FFD166;
+
+}
+
+.banner-content p{
+
+    font-size:20px;
+
+    margin-bottom:30px;
+
+}
+
+/*=========================================
+        BOTÓN
+=========================================*/
+
+.btn-contacto{
+
+    display:inline-block;
+
+    padding:15px 35px;
+
+    background:linear-gradient(135deg,#00B4D8,#0F4C81);
+
+    color:white;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.4s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.btn-contacto:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/*=========================================
+        CONTENEDORES
+=========================================*/
+
+.container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:80px 20px;
+
+}
+
+.heading-1{
+
+    font-size:40px;
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+    color:var(--primary);
+
+    position:relative;
+
+}
+
+.heading-1::after{
+
+    content:"";
+
+    width:90px;
+
+    height:5px;
+
+    background:var(--secondary);
+
+    display:block;
+
+    margin:15px auto;
+
+    border-radius:10px;
+
+}
+
+/*=========================================
+        SOBRE NOSOTROS
+=========================================*/
+
+/*====================================
+    INFORMACIÓN DE CONTACTO
+====================================*/
+
+.contenedor-sobre-nosotros{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:50px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.contenedor-sobre-nosotros img{
+    width:420px;
+    max-width:100%;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+.contenedor-sobre-nosotros img:hover{
+    transform:scale(1.03);
+}
+
+.contenido-textos{
+    flex:1;
+    min-width:320px;
+}
+
+.contenido-textos h3{
+    color:#00c9a7;
+    margin-top:20px;
+    margin-bottom:8px;
+    font-size:22px;
+    border-left:5px solid #00c9a7;
+    padding-left:12px;
+}
+
+.contenido-textos p{
+    color:#555;
+    line-height:1.8;
+    margin-bottom:15px;
+    text-align:justify;
+    font-size:16px;
+}
+
+/* Caja informativa */
+
+.contacto-info{
+
+    background:#ffffff;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+/* Iconos (opcional) */
+
+.contacto-info p{
+
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+
+}
+
+/*====================================
+        RESPONSIVE
+====================================*/
+
+@media(max-width:768px){
+
+.contenedor-sobre-nosotros{
+
+    flex-direction:column;
+    text-align:center;
+
+}
+
+.contenedor-sobre-nosotros img{
+
+    width:100%;
+
+}
+
+.contenido-textos{
+
+    width:100%;
+
+}
+
+.contenido-textos h3{
+
+    border-left:none;
+    border-bottom:3px solid #00c9a7;
+    display:inline-block;
+    padding:0 0 8px 0;
+
+}
+
+.contenido-textos p{
+
+    text-align:center;
+
+}
+
+}
+/*=========================================
+        CATEGORÍAS
+=========================================*/
+
+.container-categories{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.card-category{
+
+    min-height:230px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+    color:white;
+
+    transition:.4s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.card-category:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card-category::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+}
+
+.card-category div,
+.card-category p{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.card-category h2{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+.card-category p{
+
+    font-size:16px;
+
+    line-height:1.6;
+
+}
+
+.category-moca{
+
+    background:url("../img/perfil.jpg") center/cover;
+
+}
+
+.category-expreso{
+
+    background:url("../img/cursos.jpg") center/cover;
+
+}
+
+.category-capuchino{
+
+    background:url("../img/calendario.jpg") center/cover;
+
+}
+
+/*=========================================
+        BLOGS
+=========================================*/
+
+.container-blogs{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+.card-blog{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+}
+
+.card-blog:hover{
+
+    transform:translateY(-10px);
+
+}
+
+/*==================================
+        IMÁGENES DE TARJETAS
+===================================*/
+
+.img-box{
+    width:100%;
+    height:220px;
+    overflow:hidden;
+}
+
+.img-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:0.4s ease;
+}
+
+.card-blog:hover .img-box img{
+    transform:scale(1.08);
+}
+
+.content-blog{
+
+    padding:30px;
+
+    text-align:center;
+
+}
+
+.content-blog h3{
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+    font-size:23px;
+
+}
+
+.content-blog p{
+
+    color:var(--gray);
+
+    margin-bottom:25px;
+
+}
+
+/*=========================================
+        TARJETAS
+=========================================*/
+
+.card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.card h3{
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    color:var(--gray);
+
+}
+
+/*=========================================
+        TABLAS
+=========================================*/
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+table th{
+
+    background:linear-gradient(135deg,#0F4C81,#00B4D8);
+
+    color:white;
+
+    padding:18px;
+
+    font-size:17px;
+
+}
+
+table td{
+
+    padding:18px;
+
+    border-bottom:1px solid #ececec;
+
+    text-align:center;
+
+}
+
+table tr:hover{
+
+    background:#f8fbff;
+
+}
+
+/*=========================================
+        FORMULARIOS
+=========================================*/
+
+.contact-form{
+
+    max-width:800px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+
+    padding:16px;
+
+    border-radius:12px;
+
+    border:1px solid #d6d6d6;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    border-color:var(--secondary);
+
+    box-shadow:0 0 10px rgba(0,180,216,.3);
+
+}
+
+.contact-form textarea{
+
+    resize:vertical;
+
+}
+
+/*=========================================
+        CAJAS INFORMATIVAS
+=========================================*/
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+.info-box{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    text-align:center;
+
+}
+
+.info-box h3{
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+.info-box p{
+
+    color:var(--gray);
+
+}
+
+/*=========================================
+        ESTADÍSTICAS
+=========================================*/
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.stat{
+
+    background:white;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.stat h2{
+
+    font-size:42px;
+
+    color:var(--primary);
+
+}
+
+.stat span{
+
+    color:var(--gray);
+
+    font-size:15px;
+
+}
+
+/*=========================================
+        ALERTAS
+=========================================*/
+
+.alert{
+
+    padding:18px;
+
+    border-radius:12px;
+
+    margin:20px 0;
+
+    color:white;
+
+}
+
+.alert-success{
+
+    background:#2ECC71;
+
+}
+
+.alert-warning{
+
+    background:#F39C12;
+
+}
+
+.alert-danger{
+
+    background:#E74C3C;
+
+}
+/*=========================================
+        FOOTER
+=========================================*/
+
+.footer{
+
+    background:linear-gradient(135deg,#0F4C81,#1F2937);
+
+    color:white;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    margin-top:80px;
+
+}
+
+.footer h2{
+
+    font-size:32px;
+
+    margin-bottom:15px;
+
+}
+
+.footer p{
+
+    margin:10px 0;
+
+    color:#d1d5db;
+
+}
+
+.footer .btn-contacto{
+
+    margin-top:20px;
+
+}
+
+/*=========================================
+        ANIMACIONES
+=========================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes zoom{
+
+    from{
+
+        transform:scale(.9);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.banner-content{
+
+    animation:fadeUp 1s ease;
+
+}
+
+.card-blog{
+
+    animation:zoom .8s ease;
+
+}
+
+.card-category{
+
+    animation:fadeUp .9s ease;
+
+}
+
+.contenedor-sobre-nosotros{
+
+    animation:fadeUp 1s ease;
+
+}
+
+/*=========================================
+        EFECTOS
+=========================================*/
+
+.card-blog:hover{
+
+    box-shadow:0 18px 35px rgba(0,0,0,.18);
+
+}
+
+.card-category:hover{
+
+    box-shadow:0 18px 35px rgba(0,0,0,.20);
+
+}
+
+.btn-contacto:hover{
+
+    background:linear-gradient(135deg,#00A8CC,#083B66);
+
+}
+
+table tr{
+
+    transition:.3s;
+
+}
+
+table tr:hover{
+
+    transform:scale(1.01);
+
+}
+
+/*=========================================
+        SCROLLBAR
+=========================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#edf2f7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#0F4C81;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#00B4D8;
+
+}
+
+/*=========================================
+        RESPONSIVE TABLET
+=========================================*/
+
+@media(max-width:992px){
+
+.banner{
+
+    min-height:340px;
+
+}
+
+.banner-content h1{
+
+    font-size:42px;
+
+}
+
+.banner-content h2{
+
+    font-size:24px;
+
+}
+
+.heading-1{
+
+    font-size:34px;
+
+}
+
+.contenedor-sobre-nosotros{
+
+    grid-template-columns:1fr;
+
+}
+
+.contenedor-sobre-nosotros img{
+
+    max-width:550px;
+
+    margin:auto;
+
+}
+
+.nav-menu{
+
+    gap:18px;
+
+}
+
+}
+
+/*=========================================
+        RESPONSIVE MÓVIL
+=========================================*/
+
+@media(max-width:768px){
+
+.hamburger{
+
+    display:flex;
+
+}
+
+.nav-menu{
+
+    position:absolute;
+
+    top:70px;
+
+    right:0;
+
+    width:260px;
+
+    background:#0F4C81;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    padding:30px;
+
+    transform:translateX(100%);
+
+    transition:.4s;
+
+}
+
+.nav-menu.active{
+
+    transform:translateX(0);
+
+}
+
+.banner{
+
+    min-height:300px;
+
+}
+
+.banner-content h1{
+
+    font-size:34px;
+
+}
+
+.banner-content h2{
+
+    font-size:20px;
+
+}
+
+.banner-content p{
+
+    font-size:17px;
+
+}
+
+.heading-1{
+
+    font-size:28px;
+
+}
+
+.container{
+
+    padding:60px 20px;
+
+}
+
+.container-categories{
+
+    grid-template-columns:1fr;
+
+}
+
+.container-blogs{
+
+    grid-template-columns:1fr;
+
+}
+
+.card-blog{
+
+    width:100%;
+
+}
+
+.img-box{
+
+    height:180px;
+
+}
+
+.img-box img{
+
+    width:90px;
+
+    height:90px;
+
+}
+
+.content-blog{
+
+    padding:20px;
+
+}
+
+table{
+
+    display:block;
+
+    overflow-x:auto;
+
+}
+
+.contact-form{
+
+    width:100%;
+
+}
+
+.footer h2{
+
+    font-size:26px;
+
+}
+
+}
+
+/*=========================================
+        MÓVILES PEQUEÑOS
+=========================================*/
+
+@media(max-width:480px){
+
+.logo{
+
+    font-size:24px;
+
+}
+
+.banner{
+
+    min-height:260px;
+
+}
+
+.banner-content h1{
+
+    font-size:28px;
+
+}
+
+.banner-content h2{
+
+    font-size:18px;
+
+}
+
+.banner-content p{
+
+    font-size:15px;
+
+}
+
+.heading-1{
+
+    font-size:24px;
+
+}
+
+.btn-contacto{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.content-blog h3{
+
+    font-size:20px;
+
+}
+
+.content-blog p{
+
+    font-size:15px;
+
+}
+
+.contenido-textos h3{
+
+    font-size:20px;
+
+}
+
+.contenido-textos p{
+
+    font-size:15px;
+
+}
+
+}
+
+/*=========================================
+        UTILIDADES
+=========================================*/
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-1{
+
+    margin-top:10px;
+
+}
+
+.mt-2{
+
+    margin-top:20px;
+
+}
+
+.mt-3{
+
+    margin-top:30px;
+
+}
+
+.mt-4{
+
+    margin-top:40px;
+
+}
+
+.mb-1{
+
+    margin-bottom:10px;
+
+}
+
+.mb-2{
+
+    margin-bottom:20px;
+
+}
+
+.mb-3{
+
+    margin-bottom:30px;
+
+}
+
+.shadow{
+
+    box-shadow:var(--shadow);
+
+}
+
+.rounded{
+
+    border-radius:20px;
+
+}
+
+.bg-primary{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.bg-secondary{
+
+    background:var(--secondary);
+
+    color:white;
+
+}
+
+.bg-success{
+
+    background:var(--success);
+
+    color:white;
+
+}
+
+.bg-warning{
+
+    background:var(--warning);
+
+    color:white;
+
+}
+
+.bg-danger{
+
+    background:var(--danger);
+
+    color:white;
+
+}
+
+/*=========================================
+        FIN DEL CSS
+=========================================*/
